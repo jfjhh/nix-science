@@ -1,5 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
+# Nix for Julia packages
 if git diff --cached --name-only | grep -q 'julia/Manifest.toml'; then
   echo "pre-commit: Modified 'julia/Manifest.toml'."
   echo "pre-commit: Rebuilding nix files ... "
@@ -9,3 +10,19 @@ if git diff --cached --name-only | grep -q 'julia/Manifest.toml'; then
   cd ..
   echo "pre-commit: ... done."
 fi
+
+
+# Nix for LaTeX packages
+
+texfiles="$(git diff --cached --name-only tex | grep -E '.*\.(tex|cls)')"
+
+if [ -n "$texfiles" ]; then
+  echo "$texfiles" | xargs echo "pre-commit: Modified: "
+  echo "pre-commit: Rebuilding nix files ... "
+  cd tex/.nix
+  tex2nix ../*.tex
+  git add tex-env.nix
+  cd ../..
+  echo "pre-commit: ... done."
+fi
+
