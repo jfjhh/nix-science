@@ -1,0 +1,2 @@
+import .nix/shell.nix
+

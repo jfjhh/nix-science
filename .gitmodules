@@ -1,0 +1,3 @@
+[submodule "julia/.nix/julia2nix"]
+	path = julia/.nix/julia2nix
+	url = https://github.com/jfjhh/julia2nix

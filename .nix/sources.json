@@ -1,0 +1,50 @@
+{
+    "julia2nix": {
+        "branch": "main",
+        "description": "Generate Nix expressions for building a Julia depot with a set of packages",
+        "homepage": null,
+        "owner": "codedownio",
+        "repo": "julia2nix",
+        "rev": "c294458759dfdc2d90674bfe8779649ebb9f5ed6",
+        "sha256": "1xak80f82ixjln0a6ly99xr53ar02b6812vzn8m8h7yb5rrjl3sh",
+        "type": "tarball",
+        "url": "https://github.com/codedownio/julia2nix/archive/c294458759dfdc2d90674bfe8779649ebb9f5ed6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "e0ca65c81a2d7a4d82a189f1e23a48d59ad42070",
+        "sha256": "1pq9nh1d8nn3xvbdny8fafzw87mj7gsmp6pxkdl65w2g18rmcmzx",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/e0ca65c81a2d7a4d82a189f1e23a48d59ad42070.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-21.05",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "927ce1afc1db40869a463a37ea2738c27d425f80",
+        "sha256": "1f64kkjk0ba9hzf086nkvk04wkfgjgzlkjpg49nrj3ar0chvzkrb",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/927ce1afc1db40869a463a37ea2738c27d425f80.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "tex2nix": {
+        "branch": "main",
+        "description": "texlive expressions for documents",
+        "homepage": null,
+        "owner": "Mic92",
+        "repo": "tex2nix",
+        "rev": "74f6aa4c02617f9a375c66791b739472f1cf8011",
+        "sha256": "1g0dbmlgsmy2qx0pipcwp9f9kw2nl0qglm29klb9sdjq9xrfi82g",
+        "type": "tarball",
+        "url": "https://github.com/Mic92/tex2nix/archive/74f6aa4c02617f9a375c66791b739472f1cf8011.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
