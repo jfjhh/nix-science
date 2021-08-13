@@ -3,7 +3,7 @@
   registryUrl = "https://github.com/JuliaRegistries/General.git";
   registryRev = "a2fba146f7094806253ddd0c818c71c2b0e789e4";
   registrySha256 = "11z0m5xjfdv5cj0dhiv284h9idrm28z8azhda6sq9d286358lhgf";
-  rootPackages = ["Measurements" "Plots" "QuantumOptics"];
+  rootPackages = ["JLD" "Measurements" "Plots" "QuantumOptics"];
   closure = [{
   name = "AbstractFFTs";
   uuid = "621f4979-c628-5d54-868e-fcf4e3e8185c";
@@ -82,6 +82,28 @@
   treehash = "None";
   artifacts = {};
   src = null;
+} {
+  name = "Blosc";
+  uuid = "a74b3585-a348-5f62-a45c-50e91977d574";
+  path = "B/Blosc";
+  replaceUrlInManifest = null;
+  treehash = "84cf7d0f8fd46ca6f1b3e0305b4b4a37afe50fd6";
+  artifacts = {};
+  src = fetchgit { url = "https://github.com/stevengj/Blosc.jl.git"; rev = "84cf7d0f8fd46ca6f1b3e0305b4b4a37afe50fd6"; sha256 = "0miz67ckfppkdmr2ip882xqkmz07g14bd7n7n7zcl5n9f822wvb8"; };
+} {
+  name = "Blosc_jll";
+  uuid = "0b7ba130-8d10-5ba8-a3d6-c5182647fed9";
+  path = "B/Blosc_jll";
+  replaceUrlInManifest = null;
+  treehash = "e747dac84f39c62aff6956651ec359686490134e";
+  artifacts = {
+    "dad7076b61af4ac6dcb93ca63064eb18c1d4a503" = [{
+      name = "Blosc";
+      url = "https://github.com/JuliaBinaryWrappers/Blosc_jll.jl/releases/download/Blosc-v1.21.0+0/Blosc.v1.21.0.x86_64-linux-gnu-cxx11.tar.gz";
+      sha256 = "ff07632906aebee23846078a065400b24816b49789bdc3ee8148342a6e5854ec";
+    }];
+  };
+  src = fetchgit { url = "https://github.com/JuliaBinaryWrappers/Blosc_jll.jl.git"; rev = "e747dac84f39c62aff6956651ec359686490134e"; sha256 = "1jh06z9v0mj77igy3z20a201w2ag34h6fyl5x396cbms60wlyyi7"; };
 } {
   name = "Bzip2_jll";
   uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0";
@@ -439,6 +461,14 @@
   artifacts = {};
   src = fetchgit { url = "https://github.com/c42f/FastClosures.jl.git"; rev = "acebe244d53ee1b461970f8910c235b259e772ef"; sha256 = "1ypinin57wvfpxypbwpj38qjvkmvsbs2xyx8m1xr7iq8dpb6klnq"; };
 } {
+  name = "FileIO";
+  uuid = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549";
+  path = "F/FileIO";
+  replaceUrlInManifest = null;
+  treehash = "256d8e6188f3f1ebfa1a5d17e072a0efafa8c5bf";
+  artifacts = {};
+  src = fetchgit { url = "https://github.com/JuliaIO/FileIO.jl.git"; rev = "256d8e6188f3f1ebfa1a5d17e072a0efafa8c5bf"; sha256 = "1ykxnqsarv9bn6375mihh5x7aivdm4zks7z22ndn6djq7fflaxnl"; };
+} {
   name = "FillArrays";
   uuid = "1a297f60-69ca-5386-bcde-b61e274b549b";
   path = "F/FillArrays";
@@ -617,6 +647,28 @@
   artifacts = {};
   src = fetchgit { url = "https://github.com/JuliaAttic/Grisu.jl.git"; rev = "53bb909d1151e57e2484c3d1b53e19552b887fb2"; sha256 = "0kmaavxxgxm47b8cj27s9rfsxxz8x4ic1ri1p0x1gmlmb6v00qf1"; };
 } {
+  name = "HDF5";
+  uuid = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f";
+  path = "H/HDF5";
+  replaceUrlInManifest = null;
+  treehash = "83173193dc242ce4b037f0263a7cc45afb5a0b85";
+  artifacts = {};
+  src = fetchgit { url = "https://github.com/JuliaIO/HDF5.jl.git"; rev = "83173193dc242ce4b037f0263a7cc45afb5a0b85"; sha256 = "0zrpnjkz9n52c3jv17n6d4km6kp14fp8lwirzrha27p7nb74c03q"; };
+} {
+  name = "HDF5_jll";
+  uuid = "0234f1f7-429e-5d53-9886-15a909be8d59";
+  path = "H/HDF5_jll";
+  replaceUrlInManifest = null;
+  treehash = "fd83fa0bde42e01952757f01149dd968c06c4dba";
+  artifacts = {
+    "997813d46a8a06e6e9871a2a01483f91ce954eca" = [{
+      name = "HDF5";
+      url = "https://github.com/JuliaBinaryWrappers/HDF5_jll.jl/releases/download/HDF5-v1.12.0+1/HDF5.v1.12.0.x86_64-linux-gnu.tar.gz";
+      sha256 = "5228e0ed33022a333723ac8953e1c7a8c5e55a1f13df17168007bda7bba57aaa";
+    }];
+  };
+  src = fetchgit { url = "https://github.com/JuliaBinaryWrappers/HDF5_jll.jl.git"; rev = "fd83fa0bde42e01952757f01149dd968c06c4dba"; sha256 = "1q49mxyh1d0zzsxks36s26w65x1f1mbbpxpm3pnziwb9wxl3pijz"; };
+} {
   name = "HTTP";
   uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3";
   path = "H/HTTP";
@@ -732,6 +784,14 @@
   treehash = "a3f24677c21f5bbe9d2a714f95dcd58337fb2856";
   artifacts = {};
   src = fetchgit { url = "https://github.com/queryverse/IteratorInterfaceExtensions.jl.git"; rev = "a3f24677c21f5bbe9d2a714f95dcd58337fb2856"; sha256 = "1slpay1dhja8f9gy6z7b3psgvgcknn963dvfqqakvg1grk9ppa09"; };
+} {
+  name = "JLD";
+  uuid = "4138dd39-2aa7-5051-a626-17a0bb65d9c8";
+  path = "J/JLD";
+  replaceUrlInManifest = null;
+  treehash = "1d291ba1730de859903b480e6f85a0dc40c19dcb";
+  artifacts = {};
+  src = fetchgit { url = "https://github.com/JuliaIO/JLD.jl.git"; rev = "1d291ba1730de859903b480e6f85a0dc40c19dcb"; sha256 = "12qwj1w3ylmz0mfnhrcn11nxra5lch3xbx3a8a2gvl7nggsghmzb"; };
 } {
   name = "JLLWrappers";
   uuid = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210";
@@ -1052,6 +1112,20 @@
   treehash = "6643933c619b292cb1fe566f5a411dddddec3db9";
   artifacts = {};
   src = fetchgit { url = "https://github.com/JuliaSIMD/LoopVectorization.jl.git"; rev = "6643933c619b292cb1fe566f5a411dddddec3db9"; sha256 = "0vvzrf57z44l09gwdr12fh9qr91y3nnqkhm2i7bhrkqmkbz9n9q1"; };
+} {
+  name = "Lz4_jll";
+  uuid = "5ced341a-0733-55b8-9ab6-a4889d929147";
+  path = "L/Lz4_jll";
+  replaceUrlInManifest = null;
+  treehash = "5d494bc6e85c4c9b626ee0cab05daa4085486ab1";
+  artifacts = {
+    "ad2663460a9a7c142287f3ccbe13e95952537c6d" = [{
+      name = "Lz4";
+      url = "https://github.com/JuliaBinaryWrappers/Lz4_jll.jl/releases/download/Lz4-v1.9.3+0/Lz4.v1.9.3.x86_64-linux-gnu.tar.gz";
+      sha256 = "1a1204d55eebdc58b51e2a3b7665aa1fc3147f246deab019ee5083f09a5d471d";
+    }];
+  };
+  src = fetchgit { url = "https://github.com/JuliaBinaryWrappers/Lz4_jll.jl.git"; rev = "5d494bc6e85c4c9b626ee0cab05daa4085486ab1"; sha256 = "0wp3ib6z684bl7b00z2i03awqqiv8vja8xw1zjpasznkg1hklk5k"; };
 } {
   name = "MKL_jll";
   uuid = "856f044c-d86e-5d09-b602-aeab76dc8ba7";
